@@ -101,11 +101,11 @@ void conv_2(data_t din[32][32][16], data_t dout[4][4][32],
 	}
 
 	conv_2_label0: for (int ii = 0; ii < 32; ii += 8) {
-		for (int jj = 0; jj < 32; jj += 8) {
-			for (int cho = 0; cho < 32; ++cho) {
+		conv_2_label10: for (int jj = 0; jj < 32; jj += 8) {
+			conv_2_label11: for (int cho = 0; cho < 32; ++cho) {
 				dout[ii / 8][jj / 8][cho] = 0;
-				for (int i = 0; i < 8; ++i) {
-					for (int j = 0; j < 8; ++j) {
+				conv_2_label12: for (int i = 0; i < 8; ++i) {
+					conv_2_label13: for (int j = 0; j < 8; ++j) {
 						if (dtemp[ii + i][jj + j][cho]
 								> dout[ii / 8][jj / 8][cho]) {
 							dout[ii / 8][jj / 8][cho] =

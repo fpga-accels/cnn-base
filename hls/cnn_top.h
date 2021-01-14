@@ -1,13 +1,8 @@
 #ifndef _CNN_TOP_H_
 #define _CNN_TOP_H_
-#include <hls_stream.h>
+
 #include <string.h>
-#include "ap_fixed.h"
-#define HEIGHT 128
-#define WIDTH 128
-#define CH_IN 3
-#define KSIZE 3
-#define CH_OUT 16
+
 
 typedef float data_t;
 
