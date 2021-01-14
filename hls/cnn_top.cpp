@@ -39,12 +39,12 @@ void conv_1(data_t din[128][128][3], data_t dout[32][32][16],
 			}
 		}
 	}
-	for (int ii = 0; ii < 128; ii += 4) {
-		for (int jj = 0; jj < 128; jj += 4) {
-			for (int cho = 0; cho < 16; ++cho) {
+	conv_1_label4: for (int ii = 0; ii < 128; ii += 4) {
+		conv_1_label5:for (int jj = 0; jj < 128; jj += 4) {
+			conv_1_label6:for (int cho = 0; cho < 16; ++cho) {
 				dout[ii / 4][jj / 4][cho] = 0;
-				for (int i = 0; i < 4; ++i) {
-					for (int j = 0; j < 4; ++j) {
+				conv_1_label7:for (int i = 0; i < 4; ++i) {
+					conv_1_label8:for (int j = 0; j < 4; ++j) {
 						if (dtemp[ii + i][jj + j][cho]
 								> dout[ii / 4][jj / 4][cho]) {
 							dout[ii / 4][jj / 4][cho] =
