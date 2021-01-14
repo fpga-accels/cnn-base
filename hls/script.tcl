@@ -4,6 +4,7 @@
 ## Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ############################################################
 open_project cnn
+set_top cnn_top
 add_files cnn/cnn_top.cpp
 add_files cnn/cnn_top.h
 add_files -tb cnn/cnn_tb.cpp
