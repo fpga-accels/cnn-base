@@ -14,5 +14,5 @@ create_clock -period 20 -name default
 source ./directives.tcl
 csim_design
 csynth_design
-cosim_design
+#cosim_design
 export_design -format ip_catalog
